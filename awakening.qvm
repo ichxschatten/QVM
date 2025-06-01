@@ -1,0 +1,13 @@
+        ORG 0
+START:  LD A
+        ADD B
+        MUL TWO
+        STO RESULT
+        HALT
+
+        ORG 20
+A:      DATA 10
+B:      DATA 5
+TWO:    DATA 2
+RESULT: BSS 1
+        END
