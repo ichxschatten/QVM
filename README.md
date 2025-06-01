@@ -51,29 +51,30 @@ It reads an assembly-like program from a text file, assembles it into machine co
 ## Example Program (`awakening.qvm`)
 
 ```
-        ORG 0
-START:  LD A
-        ADD B
-        MUL TWO
-        STO RESULT
-        HALT
+       ORG 0
 
-        ORG 20
-A:      DATA 10
-B:      DATA 5
-TWO:    DATA 2
+NUM1:   BSS 1
+NUM2:   BSS 1
 RESULT: BSS 1
-        END
+HEXVAL: DATA 0xA
+
+        IN   NUM1
+        IN   NUM2
+        LD   NUM1
+        ADD  NUM2
+        STO  RESULT
+        OUT  RESULT
+        HALT
 ```
-
-This program calculates `(A + B) * TWO` and stores the result in `RESULT`.
-
----
 
 ## Output Example
 
 ```
-Execution completed. Result: 30
+Enter QVM program file [awakening.qvm]: 
+Unknown opcode 0 at PC=0
+Execution completed. RESULT: 0
+PC: 1, ACC: 0
+Memory around RESULT: [0]=0 [1]=0 [2]=0 [3]=10 [4]=655360
 ```
 
 ---
