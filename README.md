@@ -1,6 +1,6 @@
 # QVM (Q Virtual Machine) - Simple Assembler and Virtual Machine
 
-This project is a simple assembler and virtual machine written in Go.  
+This project is a simple assembler and virtual machine written.  
 It reads an assembly-like program from a text file, assembles it into machine code, and executes it in a virtual machine.
 
 ---
@@ -16,7 +16,7 @@ It reads an assembly-like program from a text file, assembles it into machine co
 
 ## File Structure
 
-- `QVM.go` — Main source code for the assembler and virtual machine.
+- `QVM.exe` — virtual machine.
 - `awakening.qvm` — Example assembly program (see below).
 
 ---
