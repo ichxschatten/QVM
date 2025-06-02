@@ -1,0 +1,11 @@
+ORG 0
+
+NUM1:   DATA 7
+NUM2:   DATA 5
+RESULT: BSS 1
+
+        LD  NUM1
+        ADD NUM2
+        STO RESULT
+        OUT RESULT
+        HALT
